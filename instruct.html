@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Glaucoma Screening - Instructions</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+    }
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: white;
+    }
+    h1, h2 {
+      text-align: center;
+      color: #2c3e50;
+    }
+    .about, .output {
+      margin-top: 30px;
+    }
+    .image-pair {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
+    .image-pair div {
+      text-align: center;
+      margin: 10px;
+    }
+    .image-pair img {
+      width: 300px;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+    .steps {
+      margin-top: 30px;
+    }
+    .step {
+      margin-bottom: 40px;
+    }
+    .step img {
+      width: 100%;
+      max-width: 700px;
+      height: auto;
+      display: block;
+      margin: 10px auto;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+    }
+    .btn {
+      display: block;
+      margin: 40px auto;
+      padding: 12px 24px;
+      background-color: #3498db;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 16px;
+      text-align: center;
+      transition: background-color 0.3s ease;
+    }
+    .btn:hover {
+      background-color: #2980b9;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Glaucoma Screening Website</h1>
+
+    <div class="about">
+      <h2>About the Project</h2>
+      <p>
+        This website is developed to raise awareness and provide a basic screening tool for detecting signs of glaucoma in eye images. It uses machine learning to predict the probability of glaucoma based on image input.
+
+        Glaucoma, one of the leading causes of permanent blindness worldwide, often progresses silently until it reaches an advanced stage. Early detection is essential to preventing vision loss, and color fundus photography is a widely used non-invasive screening method.
+
+        However, the significant variation in image quality across different screening environments, especially in rural and telemedicine settings, is a significant barrier to accurate diagnosis and automated systems.
+
+        Inspired by the AIROGS challenge, this project offers a robust deep learning-based glaucoma screening system designed to address these problems. Using Generative Adversarial Networks (GANs) and super-resolution techniques, it enhances low-quality retinal images, restoring important details needed for reliable analysis.
+
+        The model can function consistently across datasets with different image distributions and quality levels thanks to the integration of a gradient reversal layer for domain adaptation.
+
+        The classification pipeline combines Vision Transformers (ViT) to capture intricate retinal structures and global dependencies with EfficientNet-B0 for effective feature extraction. The system showed excellent accuracy and adaptability during training and testing on the Zenodo dataset, indicating that it is ready for practical implementation.
+
+        By reducing reliance on clinical expertise, this automated and scalable solution makes glaucoma detection more accessible and early in a variety of healthcare settings.
+      </p>
+    </div>
+
+    <div class="image-pair">
+      <div>
+        <img src="images/glaucoma_NRG.jpg" alt="Glaucoma NRG" />
+        <p>Non-Referable Glaucoma</p>
+      </div>
+      <div>
+        <img src="images/glaucoma_RG.jpg" alt="Glaucoma RG" />
+        <p>Referable Glaucoma</p>
+      </div>
+    </div>
+
+    <div class="output">
+      <h2>Output</h2>
+      <div class="steps">
+        <div class="step">
+          <p><strong>1. By running the code, you can review the output</strong></p>
+          <img src="images/11.png" alt="Review button screenshot" />
+        </div>
+        <div class="step">
+          <p><strong>2. The output will open</strong></p>
+          <img src="images/1.png" alt="Output opened screenshot" />
+        </div>
+        <div class="step">
+          <p><strong>3. Upload the captured eye image</strong></p>
+          <img src="images/2.png" alt="Eye image upload screenshot" />
+        </div>
+        <div class="step">
+          <p><strong>4. Click the Predict button to get the result</strong></p>
+          <img src="images/22.png" alt="Predict button screenshot" />
+        </div>
+        <div class="step">
+          <p><strong>5. If the result shows "Normal", there is no sign of glaucoma</strong></p>
+          <img src="images/3.png" alt="Normal result screenshot" />
+        </div>
+        <div class="step">
+          <p><strong>6. If the result shows "High", glaucoma is detected. Consult a doctor immediately. As shown, you can take medicine or call the doctor for advice.</strong></p>
+          <img src="images/4.png" alt="High result and consultation screenshot" />
+        </div>
+      </div>
+    </div>
+    <a href="https://karthikeyan7325.github.io/karthikeyan/" class="btn">Try It</a>
+  </div>
+</body>
+</html>
